@@ -1,0 +1,33 @@
+{
+  "name": "Zavizenov_Gleb_Portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gleb-zavizenov/Zavizenov_Gleb_Portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gleb-zavizenov/Zavizenov_Gleb_Portfolio/issues"
+  },
+  "homepage": "https://github.com/gleb-zavizenov/Zavizenov_Gleb_Portfolio#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "hbs": "^4.0.6",
+    "mysql": "^2.17.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.7.0",
+    "cssnano": "^4.1.10",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.0.2",
+    "nodemon": "^1.19.4"
+  }
+}
