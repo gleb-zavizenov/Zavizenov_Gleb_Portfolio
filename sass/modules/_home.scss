@@ -149,7 +149,61 @@ main{
 // 
 @media screen and (min-width:720px){
 
+    .home-lines{
+        width:720px;
+        background: url("../images/tablet-grid.png");
+        background-size: cover;
+    }
+
     .home-container{
         width:718px;
     }
+
+    .home-left{
+        img{
+            width:550px;
+        }
+    }
+
+    .home-right-heading{
+        font-size:70px;
+    }
+
+    .home-right-title{
+        font-size: 18px;
+        margin-top:20px;
+    }
+
+    .home-right-buttons{
+        width:550px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .right-buttons-contact{
+        width:255px;
+        height:70px;
+
+        p{
+            font-size:20px;
+        }
+    }
+
+    .right-buttons-view{
+        margin-top:0px;
+        width:255px;
+        height:70px;
+
+        p{
+            font-size:20px;
+        }
+    }
+}
+
+// 
+// Styles for the desktop version
+// 
+@media screen and (min-width:1200px){
+    
 }

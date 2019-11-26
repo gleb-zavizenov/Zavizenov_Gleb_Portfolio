@@ -42,3 +42,42 @@ footer{
 .footer-socials-icon:hover{
     fill:$green;
 }
+
+// 
+// Styles for the tablet version
+// 
+@media screen and (min-width:720px){
+    .footer-container{
+        width:718px;
+    }
+
+    .footer-nav{
+        width:320px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .footer-nav-link{
+        font-size: 18px;
+        font-family: "Montserrat";
+        font-weight: 300;
+        color: $grey;         
+        text-decoration: none;
+        transition: 0.7s color ease-in-out;
+    }
+
+    .footer-nav-link:hover{
+        color:$green;
+    }
+
+    .footer-socials{
+        width:260px;
+    }
+
+    .footer-socials-icon{
+        width:40px;
+        height:40px;
+    }
+}
