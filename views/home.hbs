@@ -1,0 +1,29 @@
+<div class="home-lines">
+    <div class="home-container">
+        {{#each homepage}}
+            <div class="home-left">
+                <img src="images/{{picture}}.png" alt="my-image">
+            </div>
+            <div class="home-right">
+                <h1 class="home-right-heading">{{name}}</h1>
+                <h3 class="home-right-title">{{title}}</h3>
+                <div class="home-right-quote">
+                    <div class="home-right-quotemarks">
+                        <img src="images/quotemark-left.png" alt="quotemark" class="home-right-quotemark">
+                        <img src="images/quotemark-right.png" alt="quotemark" class="home-right-quotemark">
+                    </div>
+                    <p class="home-right-quote-text">{{quote}}</p>
+                    <p class="home-rigth-quote-author">{{quote_author}}</p>
+                </div>
+                <div class="home-right-buttons">
+                    <div class="right-buttons-contact">
+                        <p>CONTACT ME</p>
+                    </div>
+                    <div href="" class="right-buttons-view">
+                        <p>VIEW SHOWREEL</p>
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</div>

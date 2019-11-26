@@ -1,0 +1,43 @@
+//
+// Styles for the mobile version
+//
+header{
+    width:100%;
+    position: absolute;
+    top:15px;
+    left:0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-container{
+    width:318px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-logo{
+    width:60px;
+    height:47px;
+
+    img{
+        width:100%;
+    }
+}
+
+.header-nav{
+    display: none;
+}
+
+.header-burger{
+    width:60px;
+    height:36px;
+
+    img{
+        height:100%;
+        width:100%;
+    }
+}
