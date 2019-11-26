@@ -1,0 +1,90 @@
+//
+// Styles for the mobile version
+//
+header{
+    width:100%;
+    position: absolute;
+    top:15px;
+    left:0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-container{
+    width:318px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-logo{
+    width:60px;
+    height:47px;
+
+    img{
+        width:100%;
+    }
+}
+
+.header-nav{
+    display: none;
+}
+
+.header-burger{
+    width:60px;
+    height:36px;
+
+    img{
+        height:100%;
+        width:100%;
+    }
+}
+
+// 
+// Styles for the tablet version
+// 
+@media screen and (min-width:720px){
+    header{
+        top:20px;
+    }
+
+    .header-container{
+        width:718px;
+    }
+
+    .header-logo{
+        width:80px;
+        height:63px;
+    }
+
+    .header-nav{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width:425px;
+    }
+
+    .header-nav-link{
+        text-decoration: none;
+        font-size: 18px;
+        font-family: "Montserrat";
+        font-weight: 400;
+        color: $black;    
+        transition: 0.7s color ease-in-out;     
+    }
+
+    .header-nav-link:hover{
+        color:$green;
+    }
+
+    .header-burger{
+        display: none;
+    }
+}
+
+// 
+// Styles for the desktop version
+//

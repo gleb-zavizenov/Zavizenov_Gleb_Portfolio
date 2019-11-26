@@ -14,10 +14,10 @@ router.get('/', (req, res) => {
             console.log(err);
         }
 
-        //console.log(result); // should see objects wrapped in an array
+        console.log(result); // should see objects wrapped in an array
 
         // render the home view with dynamic data
-        res.render('home', { sections: result });
+        res.render('home', { homepage: result });
     })
 })
 
