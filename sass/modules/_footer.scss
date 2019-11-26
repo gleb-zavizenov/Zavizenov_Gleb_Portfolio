@@ -81,3 +81,37 @@ footer{
         height:40px;
     }
 }
+
+// 
+// Styles for the desktop version
+//
+@media screen and (min-width:1200px){
+
+    footer{
+        height:70px;
+    }
+
+    .footer-container{
+        width:1198px;
+    }
+
+    .footer-nav-link{
+        font-size:16px;
+    }
+
+    .footer-socials{
+        width:296px;
+    }
+
+    .footer-socials-icon{
+        path{
+            transition: 0.7s all ease-in-out;
+        }
+    }
+
+    .footer-socials-icon:hover{
+        path{
+            fill: $green;
+        }
+    }
+}

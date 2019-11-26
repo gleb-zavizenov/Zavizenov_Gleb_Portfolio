@@ -88,3 +88,20 @@ header{
 // 
 // Styles for the desktop version
 //
+@media screen and (min-width:1200px){
+    header{
+        top:20px;
+    }
+
+    .header-logo{
+        width:70px;
+    }
+
+    .header-nav-link{
+        font-size:16px;
+    }
+
+    .header-container{
+        width:1198px;
+    }
+}
