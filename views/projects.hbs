@@ -1,0 +1,16 @@
+<div class="projects-lines">
+    <div class="projects-container">
+        {{#each projects}}
+        <div class="projects-block">
+            <div class="projects-block-popup">
+                <h2 class="projects-block-popup-title">{{project_name}}</h2>
+                <h4 class="projects-block-popup-subtitle">{{project_type}}</h4>
+                <a href="{{ID}}" class="projects-block-popup-button">
+                    <div>LEARN MORE</div>
+                </a>
+            </div>
+            <img src="images/{{project_cover}}" alt="{{project_name}}" class="projects-block-img">
+        </div>
+        {{/each}}
+    </div>
+</div>
