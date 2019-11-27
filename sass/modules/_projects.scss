@@ -1,0 +1,105 @@
+// 
+// Styles for the mobile version
+// 
+
+.adaptive-body{
+    width:100%;
+    height:100%;
+    position: relative;
+}
+
+.adaptive-main{
+    width:100%;
+    height:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.projects-lines{
+    width:320px;
+    height:100%;
+    background: url("../images/mobile-grid.png");
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.projects-container{
+    width:318px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top:120px;
+    margin-bottom: 130px;
+}
+
+.projects-block{
+    width:100%;
+    height:220px;
+    overflow:hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position:relative;
+}
+
+.projects-block:hover{
+    .projects-block-popup{
+        opacity: 1;
+    }
+}
+
+.projects-block-img{
+    height:100%;
+}
+
+.projects-block-popup{
+    position: absolute;
+    top:0;
+    left:0;
+    opacity: 0;
+    transition: 0.7s opacity ease-in-out;
+    width:100%;
+    height:100%;
+    background-color: $green;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.projects-block-popup-title{
+    font-size: 36px;
+    font-family: "Barlow";
+    font-weight:400;
+    color: $grey;
+    line-height: 1;
+    text-align: center;     
+}
+
+.projects-block-popup-subtitle{
+    font-size: 14px;
+    font-family: "Montserrat";
+    font-weight: 300;
+    color: $grey; 
+    margin-top:10px;
+}
+
+.projects-block-popup-button{
+    width:230px;
+    height:50px;
+    border: 1px solid $grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    margin-top:30px;
+
+    div{
+        font-size: 16px;
+        font-family: "Montserrat";
+        font-weight:400;
+        color: $grey;        
+    }
+}
