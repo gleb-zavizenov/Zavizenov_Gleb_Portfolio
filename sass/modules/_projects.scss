@@ -148,3 +148,70 @@
 // 
 // Styles for the desktop version
 //
+@media screen and (min-width:1200px){
+    .adaptive-body{
+        height:100vh;
+    }
+    
+    .adaptive-main{
+        height:100vh;
+    }
+
+    .projects-lines{
+        width:1200px;
+        background: url("../images/desktop-grid.png");
+        background-size: cover;
+    }
+    
+    .projects-container{
+        width:1198px;
+        margin-top:0px;
+        margin-bottom: 0px;
+
+        :nth-child(1){
+            width:50%;
+
+            .projects-block-popup{
+                width:100%;
+            }
+        }
+
+        :nth-child(5){
+            width:50%;
+
+            .projects-block-popup{
+                width:100%;
+            }
+        }
+    }
+
+    .projects-block{
+        width:25%;
+        height: 220px;
+
+        .projects-block-popup{
+            width:100%;
+        }
+    }
+    
+    .projects-block-popup-title{
+        font-size: 34px;   
+    }
+    
+    .projects-block-popup-subtitle{
+        font-size: 14px;
+    }
+
+    .projects-block-popup-button{
+        transition: 0.7s all ease-in-out;
+
+        div{
+            font-size:16px;       
+        }
+    }
+
+    .projects-block-popup-button:hover{
+        background-color: $black;
+        border: 1px solid transparent;
+    }
+}
