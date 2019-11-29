@@ -1,5 +1,5 @@
 // 
-// Styles for themobile version
+// Styles for the mobile version
 // 
 .project-body{
     position: relative;
@@ -123,5 +123,61 @@
 
     img{
         width:100%;
+    }
+}
+
+// 
+// Styles for the tablet version
+// 
+@media screen and (min-width:720px){
+    .project-lines{
+        width:720px;
+        background: url("../images/tablet-grid.png");
+        background-size: 100%;
+    }
+    
+    .project-container{
+        width:718px;
+    }
+
+    .project-cover{
+        height:400px;
+    }
+
+    .project-info{
+        margin-top:70px;
+    }
+
+    .project-info-left-title{
+        font-size: 82px;
+    }
+
+    .project-info-left-desc{
+        margin-top:40px;
+        font-size:24px;
+    }
+
+    .project-info-right{
+        margin-top:50px;
+    }
+
+    .project-info-right-block-title{
+        font-size:36px;
+    }
+
+    .project-info-right-block-desc{
+        font-size: 24px;
+        margin-top:20px;
+    }
+
+    .project-info-right-line{
+        width:360px;
+        margin-top:30px;
+        margin-bottom: 30px;
+    }
+
+    .project-showcase{
+        margin-top:60px;
+        margin-bottom: 180px;
     }
 }
