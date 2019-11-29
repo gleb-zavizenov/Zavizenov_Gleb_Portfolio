@@ -1,0 +1,60 @@
+<div class="about-lines">
+    <div class="about-container">
+        <div class="about-container-left">
+            <div class="about-container-left-img">
+                <img src="images/about-img.png" alt="My image">
+            </div>
+            <div class="about-container-left-btns">
+                <div class="about-container-left-btn-left">
+                    <div>CONTACT ME</div>
+                </div>
+                <div class="about-container-left-btn-right" id="resume-btn">
+                    <div>DOWNLOAD RESUME</div>
+                </div>
+            </div>
+        </div>
+        <div class="about-container-right">
+            <h1 class="about-container-right-heading">Gleb Zavizenov</h1>
+            <h3 class="about-container-right-title">About me</h3>
+            <p class="about-container-right-desc">
+                Hello! I am a junior web-developer based in London, Ontario. I have been
+                learning and practicing web design and development for more than 3 years
+                now. I am passionate about this area and want to learn about it as much
+                as possible. I am open to all offers, be sure to contact me if you have
+                an idea for a website!  
+            </p>
+            <div class="about-container-right-add">
+                <div class="container-right-add-block">
+                    <h3 class="about-container-right-title">Education</h3>
+                    <p class="about-container-right-desc">Fanshawe College</p>
+                </div>
+                <div class="container-right-add-line"></div>
+                <div class="container-right-add-block">
+                    <h3 class="about-container-right-title">Work</h3>
+                    <p class="about-container-right-desc">None yet</p>
+                </div>
+            </div>
+            <div class="slider">
+                <h3 class="about-container-right-title">Technologies I use</h3>
+                <div class="slider-core">
+                    <div class="slider-arrow">
+                        <img src="images/left-arrow.svg" alt="left-arrow">
+                    </div>
+                    <div class="slider-container">
+                        <div class="slider-items">
+                            {{#each techs}}
+                            <a href="technology/{{ID}}" class="slider-item">
+                                <img src="images/{{tech_img}}" alt="{{tech_name}}">
+                            </a>
+                            {{/each}}
+                        </div>
+                    </div>
+                    <div class="slider-arrow">
+                        <img src="images/right-arrow.svg" alt="right-arrow">
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+</div>
