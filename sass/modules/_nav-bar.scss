@@ -112,4 +112,8 @@ header{
     .header-nav-link{
         color:$grey;
     }
+
+    .header-nav-link:hover{
+        color:$green;
+    }
 }
