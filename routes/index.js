@@ -33,4 +33,19 @@ router.get('/projects', (req, res) => {
     })
 })
 
+router.get('/projects/:id', (req, res) => {
+
+    let query = `SELECT * FROM tbl_projects WHERE ID = "${req.params.id}"`;
+
+    sql.query(query, (err, result) => {
+        if (err) {
+            console.log(err);
+        }
+
+        //console.log(result);
+
+        res.render('project', { project: result, layout: 'project-layout' });
+    })
+})
+
 module.exports = router;
