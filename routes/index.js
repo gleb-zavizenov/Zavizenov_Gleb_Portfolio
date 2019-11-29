@@ -48,4 +48,19 @@ router.get('/projects/:id', (req, res) => {
     })
 })
 
+router.get('/about', (req, res) => {
+
+    let query = "SELECT * FROM tbl_techs";
+
+    sql.query(query, (err, result) => {
+        if (err) {
+            console.log(err);
+        }
+
+        //console.log(result);
+
+        res.render('about', { techs: result, layout: 'adaptive-layout' });
+    })
+})
+
 module.exports = router;
