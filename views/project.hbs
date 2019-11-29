@@ -1,0 +1,32 @@
+<div class="project-box">
+    {{#each project}}
+    <div class="project-cover">
+        <img src="../images/{{project_cover}}" alt="project cover">
+    </div>
+
+    <div class="project-lines">
+        <div class="project-container">
+            <div class="project-info">
+                <div class="project-info-left">
+                    <h1 class="project-info-left-title">{{project_name}}</h1>
+                    <p class="project-info-left-desc">{{project_desc}}</p>
+                </div>
+                <div class="project-info-right">
+                    <div class="project-info-right-block">
+                        <h2 class="project-info-right-block-title">Type</h2>
+                        <p class="project-info-right-block-desc">{{project_type}}</p>
+                    </div>
+                    <div class="project-info-right-line"></div>
+                    <div class="project-info-right-block">
+                        <h2 class="project-info-right-block-title">Technologies</h2>
+                        <p class="project-info-right-block-desc">{{project_tech}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="project-showcase">
+                <img src="../images/{{project_images}}" alt="project images}">
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>

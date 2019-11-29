@@ -1,8 +1,11 @@
 // Importing variables
 @import '_vars';
 
+// Importing pages
+@import 'modules/_home';
+@import 'modules/_projects';
+@import 'modules/_project';
+
 // Importing modules
-@import 'modules/home';
-@import 'modules/projects';
-@import 'modules/nav-bar';
-@import 'modules/footer';
+@import 'modules/_nav-bar';
+@import 'modules/_footer';
