@@ -330,3 +330,106 @@
         }
     }
 }
+
+// 
+// Styles for the desktop version
+// 
+@media screen and (min-width:1200px){
+    .about-lines{
+        width:1200px;
+        background: url("../images/desktop-grid.png");
+        background-size:100%;
+    }
+
+    .about-container{
+        margin-top:0px;
+        width:1198px;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .about-container-left{
+        width:50%;
+    }
+
+    .about-container-left-img{
+        width:70%;
+    }
+
+    .about-container-left-btn-left{
+        width:230px;
+        height:55px;
+        cursor: pointer;
+
+        div{
+            font-size:16px;
+        }
+    }
+
+    .about-container-left-btn-right{
+        width:230px;
+        height:55px;
+        cursor: pointer;
+
+        div{
+            font-size:16px;
+        }
+    }
+
+    .about-container-right{
+        margin-top:0px;
+        width:50%;
+    }
+
+    .about-container-right-content{
+        width:550px;
+    }
+
+    .about-container-right-heading{
+        font-size: 72px;
+        margin-bottom: 40px;
+    }
+
+    .about-container-right-title{
+        font-size:26px;
+        margin-bottom: 15px;
+    }
+
+    .about-container-right-desc{
+        font-size:18px;
+    }
+
+    .about-container-right-add{
+        margin-top:25px;
+    }
+
+    .container-right-add-line{
+        margin-left:57px;
+        margin-right:57px;
+        height: 50px;
+    }
+
+    .slider{
+        margin-top:25px;
+        margin-bottom: 0px;
+    }
+
+    .slider-arrow{
+        cursor:pointer;
+    }
+
+    .slider-container{
+        height:60px;
+        width:360px;
+    }
+
+    .slider-items{
+        height:60px;
+    }
+
+    .slider-item{
+        width:60px;
+        height:60px;
+    }
+
+}

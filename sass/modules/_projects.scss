@@ -211,7 +211,11 @@
     }
 
     .projects-block-popup-button:hover{
-        background-color: $black;
+        background-color: $grey;
         border: 1px solid transparent;
+
+        div{
+            color:$green;
+        }
     }
 }
