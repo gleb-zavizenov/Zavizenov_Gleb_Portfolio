@@ -44,7 +44,7 @@
                         <div class="slider-container">
                             <div class="slider-items" style="left:0;">
                                 {{#each techs}}
-                                <a href="technology/{{ID}}" class="slider-item">
+                                <a href="{{ID}}" class="slider-item">
                                     <img src="images/{{tech_img}}" alt="{{tech_name}}">
                                 </a>
                                 {{/each}}
@@ -58,5 +58,21 @@
                 </div>
             </div>
         </div>
+    </div>
+</div>
+
+{{!-- Popup that descrives a selected technology --}}
+<div class="technology-popup">
+    <div class="close-btn">
+        <svg viewBox="0 0 202 202" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="1" y="1" width="200" height="200" stroke="#1A1A1A"/>
+            <path d="M161 34L168.071 41.0711L40.7919 168.35L33.7208 161.279L161 34Z" fill="#1A1A1A"/>
+            <path d="M34 41L41.0711 33.9289L168.35 161.208L161.279 168.279L34 41Z" fill="#1A1A1A"/>
+        </svg>
+    </div>
+    <div class="technology-popup-container">
+        <img src="" alt="">
+        <h2></h2>
+        <p></p>
     </div>
 </div>

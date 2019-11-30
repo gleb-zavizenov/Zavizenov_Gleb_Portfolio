@@ -13,7 +13,6 @@ let offsetAmount = sliderItems[0].offsetWidth + parseInt(elementMargin.marginRig
 let containerWidth = document.querySelector(".slider-container").offsetWidth;
 let count = 0;
 
-console.log(containerWidth);
 leftArrow.addEventListener("click", function(){
     if(count != -0){
         count = count + 1;
@@ -36,3 +35,42 @@ rightArrow.addEventListener("click", function(){
     let currentPosition = count * offsetAmount;
     sliderInside.style.left = `${currentPosition}px`;
 });
+
+// 
+// Popup on the about page
+//
+const myVM = (() => {
+    let triggerButtons = document.querySelectorAll(".slider-item");
+    let lightBox = document.querySelector(".technology-popup");
+  
+    function parseUserData(object) {
+        let targetContainer = lightBox.querySelector(".technology-popup-container");
+        let targetHeading = targetContainer.querySelector("h2");
+        let targetImage = targetContainer.querySelector("img");
+        let targetDesc = targetContainer.querySelector("p");
+  
+        targetHeading.innerHTML = object.tech_name;
+        targetImage.src =`images/${object.tech_img}`;
+        targetDesc.innerHTML = object.tech_desc;
+        lightBox.classList.add("technology-popup-show");
+    }
+  
+    function getUserData(e) {
+      e.preventDefault();
+      let url = `/technology/${this.getAttribute("href")}`;
+  
+      fetch(url)
+        .then(res => res.json())
+        .then(data => {
+          //console.log(data);
+          parseUserData(data);
+        })
+        .catch(err => console.log(err));
+    }
+  
+    triggerButtons.forEach(button => button.addEventListener("click", getUserData));
+  
+    lightBox.querySelector(".close-btn").addEventListener("click", function() {
+      lightBox.classList.remove("technology-popup-show");
+    });
+  })()
