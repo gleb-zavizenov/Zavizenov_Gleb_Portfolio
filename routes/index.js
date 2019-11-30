@@ -63,4 +63,17 @@ router.get('/about', (req, res) => {
     })
 })
 
+router.get('/technology/:id', (req, res) => {
+
+    let query = `SELECT * FROM tbl_techs WHERE ID = "${req.params.id}"`;
+
+    sql.query(query, (err, result) => {
+        if (err) { throw err; console.log(err); }
+
+        //console.log(result[0]);
+
+        res.json(result[0]);
+    })
+})
+
 module.exports = router;

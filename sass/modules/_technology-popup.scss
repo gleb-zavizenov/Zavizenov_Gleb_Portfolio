@@ -1,0 +1,139 @@
+// 
+// Styles for the mobile version
+// 
+.technology-popup{
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width:318px;
+    height:500px;
+    background-color: $grey;
+    box-shadow: 0px 0px 19px 1px rgba(26, 26, 26, 0.2);   
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.technology-popup-show{
+    display: flex;
+}
+
+.close-btn{
+    position: absolute;
+    top:20px;
+    right:20px;
+    width:50px;
+    cursor:pointer;
+
+    svg{
+        width:100%;
+    }
+}
+
+.technology-popup-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img{
+        height:80px;
+        margin-bottom: 30px;
+    }
+
+    h2{
+        font-size: 24px;
+        font-family: "Barlow";
+        font-weight: 500;
+        color: $black;
+        margin-bottom: 20px;
+    }
+
+    p{
+        font-size:18px;
+        font-family: "Montserrat", sans-serif;
+        color: $black;
+        font-weight: 300;
+        line-height: 1.333;
+        text-align: center;
+        width:90%;
+    }
+}
+
+// 
+// Styles for the tablet version
+//
+@media screen and (min-width:720px){
+    .technology-popup{
+        width:718px;
+    }
+
+    .technology-popup-container{
+        img{
+            height:120px;
+            margin-bottom: 45px;
+        }
+
+        h2{
+            font-size:36px;
+            margin-bottom: 30px;
+        }
+
+        div{
+            font-size: 24px;
+            width:70%;
+        }
+    }
+}
+
+// 
+// Styles for the desktop version
+//
+@media screen and (min-width:1200px){
+    .technology-popup{
+        width:700px;
+        height:500px;
+    }
+
+    .technology-popup-container{
+        img{
+            height:140px;
+            margin-bottom: 35px;
+        }
+
+        h2{
+            font-size:26px;
+            margin-bottom: 15px;
+        }
+
+        div{
+            font-size: 18px;
+            width:70%;
+        }
+    }
+
+    .close-btn{
+        svg{
+            rect{
+                transition: 0.7s fill ease-in-out;
+                fill:transparent;
+            }
+
+            path{
+                transition: 0.7s fill ease-in-out;
+            }
+        }
+    }
+
+    .close-btn:hover{
+        svg{
+            rect{
+                fill:$green;
+            }
+
+            path{
+                fill:$grey;
+            }
+        }
+    }
+}
