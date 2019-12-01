@@ -1,0 +1,69 @@
+// 
+// Styles for the mobile version
+//
+.video-popup{
+    width:100%;
+    height: 100%;
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 500;
+    background-color: rgba($color: $black, $alpha: 0.9);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-popup-show{
+    display: flex;
+}
+
+.video-popup-close{
+    position: absolute;
+    top:30px;
+    right:30px;
+    width:50px;
+    cursor: pointer;
+
+    svg{
+        rect{
+            fill: transparent;
+            transition: 0.7s fill ease-in-out;
+        }
+    }
+}
+
+.video-popup-close:hover{
+    svg{
+
+        rect{
+            fill: $green;
+        }
+    }
+}
+
+.video-popup-container{
+    width:318px;
+
+    video{
+        width:100%;
+    }
+}
+
+// 
+// Styles for the tablet version
+// 
+@media screen and (min-width:720px){
+    .video-popup-container{
+        width:718px;
+    }
+}
+
+// 
+// Styles forthr desktop version
+//
+@media screen and (min-width:1200px){
+    .video-popup-container{
+        width:720px;
+    }
+}
