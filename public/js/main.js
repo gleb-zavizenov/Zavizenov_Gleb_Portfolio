@@ -8,33 +8,60 @@ let sliderInside = document.querySelector(".slider-items");
 let sliderItems = document.querySelectorAll(".slider-item");
 
 //Measurements for slider
-let elementMargin = window.getComputedStyle(sliderItems[0]);
-let offsetAmount = sliderItems[0].offsetWidth + parseInt(elementMargin.marginRight);
-let containerWidth = document.querySelector(".slider-container").offsetWidth;
-let count = 0;
+let elementMargin;
+let offsetAmount;
+let containerWidth;
+if(sliderItems.length > 2){
+    elementMargin = window.getComputedStyle(sliderItems[0]);
+    offsetAmount = sliderItems[0].offsetWidth + parseInt(elementMargin.marginRight);
+    containerWidth = document.querySelector(".slider-container").offsetWidth;
+    let count = 0;
 
-leftArrow.addEventListener("click", function(){
-    if(count != -0){
-        count = count + 1;
-    } else if(containerWidth < 350) {
-        count = -5;
-    } 
-    else if(containerWidth > 350){
-        count = -4;
-    }
-    let currentPosition = count * offsetAmount;
-    sliderInside.style.left = `${currentPosition}px`;
-});
+    leftArrow.addEventListener("click", function(){
+        if(count != -0){
+            count = count + 1;
+        } else if(containerWidth < 350) {
+            count = -5;
+        } 
+        else if(containerWidth > 350){
+            count = -4;
+        }
+        let currentPosition = count * offsetAmount;
+        sliderInside.style.left = `${currentPosition}px`;
+    });
 
-rightArrow.addEventListener("click", function(){
-    if((containerWidth > 350 && count != -4) || (containerWidth < 350 && count != -5)){
-        count = count - 1;
-    } else {
-        count = 0;
-    }
-    let currentPosition = count * offsetAmount;
-    sliderInside.style.left = `${currentPosition}px`;
-});
+    rightArrow.addEventListener("click", function(){
+        if((containerWidth > 350 && count != -4) || (containerWidth < 350 && count != -5)){
+            count = count - 1;
+        } else {
+            count = 0;
+        }
+        let currentPosition = count * offsetAmount;
+        sliderInside.style.left = `${currentPosition}px`;
+    });
+}
+
+// 
+// Mobile navigation
+// 
+let burgerIcon = document.querySelector(".header-burger");
+let closeIcon = document.querySelector(".nav-close");
+let mobileLinks = document.querySelectorAll(".mobile-nav-link");
+let mobileNav = document.querySelector(".mobile-nav");
+
+function openNav(){
+    mobileNav.style.transform = "translateX(0%)";
+}
+
+function closeNav(){
+    mobileNav.style.transform = "translateX(-100%)";
+}
+
+burgerIcon.addEventListener("click", openNav);
+closeIcon.addEventListener("click", closeNav);
+mobileLinks.forEach(link => {
+    link.addEventListener("click", closeNav);
+})
 
 // 
 // Popup on the about page
@@ -73,4 +100,5 @@ const myVM = (() => {
     lightBox.querySelector(".close-btn").addEventListener("click", function() {
       lightBox.classList.remove("technology-popup-show");
     });
-  })()
+})()
+
