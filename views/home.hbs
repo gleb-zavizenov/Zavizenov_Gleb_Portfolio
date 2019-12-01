@@ -39,10 +39,10 @@
     </div>
     <div class="contacts-popup-container">
         <h2 class="contacts-popup-heading">Get in touch</h2>
-        <form class="contacts-popup-form" action="">
-            <input type="text" placeholder="Your name">
-            <input type="text" placeholder="Your email">
-            <textarea placeholder="Your message"></textarea>
+        <form class="contacts-popup-form" method="POST" action="/send">
+            <input required type="text" placeholder="Your name" name="name">
+            <input required type="text" placeholder="Your email" name="email">
+            <textarea required placeholder="Your message" name="message"></textarea>
             <button type="submit">SEND</button>
         </form>
     </div>

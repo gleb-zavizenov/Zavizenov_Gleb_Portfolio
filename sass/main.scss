@@ -14,3 +14,24 @@
 @import 'modules/_technology-popup';
 @import 'modules/_contacts-popup';
 @import 'modules/_video-popup';
+
+
+.contatcs-success-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+iframe{
+    margin-bottom:30px;
+    height:160px;
+}
+
+.hidden{
+    display: none;
+}
+
+.contacts-success{
+    text-align: center;
+}
