@@ -88,6 +88,24 @@ if(contactTriggerButtonTwo){
 contactsPopupClose.addEventListener("click", closeContactsPopup);
 
 // 
+// Popup with video on the home page
+//
+let videoPopupTrigger = document.querySelector(".right-buttons-view");
+let videoPopupClose = document.querySelector(".video-popup-close");
+let videoPopup = document.querySelector(".video-popup");
+let videoPopupVideo = videoPopup.querySelector("video");
+
+videoPopupTrigger.addEventListener("click", function(){
+    videoPopup.classList.add("video-popup-show");
+});
+
+videoPopupClose.addEventListener("click", function(){
+    videoPopup.classList.remove("video-popup-show");
+    videoPopupVideo.pause();
+    videoPopupVideo.currentTime = 0;
+});
+
+// 
 // Popup on the about page
 //
 const myVM = (() => {
