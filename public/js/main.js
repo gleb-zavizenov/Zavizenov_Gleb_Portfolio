@@ -63,6 +63,30 @@ mobileLinks.forEach(link => {
     link.addEventListener("click", closeNav);
 })
 
+//
+// Showing contacts form
+//
+let contactsPopup = document.querySelector(".contact-popup");
+let contactsPopupClose = document.querySelector(".close-contacts");
+let contactTriggerButtonOne = document.querySelector(".about-container-left-btn-left");
+let contactTriggerButtonTwo = document.querySelector(".right-buttons-contact");
+
+function showContactsPopup(){
+   console.log("Got here");
+    contactsPopup.classList.add("contact-popup-show");
+}
+function closeContactsPopup(){
+    contactsPopup.classList.remove("contact-popup-show");
+}
+
+if(contactTriggerButtonOne){
+    contactTriggerButtonOne.addEventListener("click", showContactsPopup);
+}
+if(contactTriggerButtonTwo){
+    contactTriggerButtonTwo.addEventListener("click", showContactsPopup);
+}
+contactsPopupClose.addEventListener("click", closeContactsPopup);
+
 // 
 // Popup on the about page
 //
