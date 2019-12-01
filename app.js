@@ -1,6 +1,8 @@
 const express = require('express');
 const path = require('path');
 const hbs = require('hbs');
+const bodyParser = require('body-parser');
+const nodemailer = require('nodemailer');
 
 // set the port
 const port = process.env.PORT || 3000;
@@ -11,20 +13,11 @@ app.use(express.static(path.join(__dirname, '/public')));
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'views'));
 
+//body parser from tutorial (https://www.youtube.com/watch?v=nF9g1825mwk&list=WL&index=2&t=0s)
+app.use(bodyParser.urlencoded({extended : false}));
+app.use(bodyParser.json());
+
 app.use('/', require('./routes/index'));
-
-// For error page
-// app.use((req, res, next) => {
-//     var err = new Error('Not Found');
-//     err.status = 404;
-//     err.customMessage = "Your page is missing!"
-
-//     next(err);
-// });
-
-// app.use((err, req, res, next) => {
-//     res.render('error', {data: err, layout: 'errorPage'});
-// })
 
 app.listen(port, () => {
     console.log(`app is running on ${port}`);

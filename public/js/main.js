@@ -72,7 +72,6 @@ let contactTriggerButtonOne = document.querySelector(".about-container-left-btn-
 let contactTriggerButtonTwo = document.querySelector(".right-buttons-contact");
 
 function showContactsPopup(){
-   console.log("Got here");
     contactsPopup.classList.add("contact-popup-show");
 }
 function closeContactsPopup(){
@@ -90,21 +89,26 @@ contactsPopupClose.addEventListener("click", closeContactsPopup);
 // 
 // Popup with video on the home page
 //
-let videoPopupTrigger = document.querySelector(".right-buttons-view");
-let videoPopupClose = document.querySelector(".video-popup-close");
 let videoPopup = document.querySelector(".video-popup");
-let videoPopupVideo = videoPopup.querySelector("video");
+let videoPopupTrigger;
+let videoPopupClose;
+let videoPopupVideo;
 
-videoPopupTrigger.addEventListener("click", function(){
-    videoPopup.classList.add("video-popup-show");
-});
+if(videoPopup){
+    videoPopupTrigger = document.querySelector(".right-buttons-view");
+    videoPopupClose = document.querySelector(".video-popup-close");
+    videoPopupVideo = videoPopup.querySelector("video");
 
-videoPopupClose.addEventListener("click", function(){
-    videoPopup.classList.remove("video-popup-show");
-    videoPopupVideo.pause();
-    videoPopupVideo.currentTime = 0;
-});
+    videoPopupTrigger.addEventListener("click", function(){
+        videoPopup.classList.add("video-popup-show");
+    });
 
+    videoPopupClose.addEventListener("click", function(){
+        videoPopup.classList.remove("video-popup-show");
+        videoPopupVideo.pause();
+        videoPopupVideo.currentTime = 0;
+    });
+}
 // 
 // Popup on the about page
 //
@@ -138,9 +142,11 @@ const myVM = (() => {
     }
   
     triggerButtons.forEach(button => button.addEventListener("click", getUserData));
-  
-    lightBox.querySelector(".close-btn").addEventListener("click", function() {
-      lightBox.classList.remove("technology-popup-show");
-    });
+
+    if(lightBox){
+        lightBox.querySelector(".close-btn").addEventListener("click", function() {
+            lightBox.classList.remove("technology-popup-show");
+          });
+    }
 })()
 
