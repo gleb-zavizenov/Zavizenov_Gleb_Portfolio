@@ -84,7 +84,10 @@ if(contactTriggerButtonOne){
 if(contactTriggerButtonTwo){
     contactTriggerButtonTwo.addEventListener("click", showContactsPopup);
 }
-contactsPopupClose.addEventListener("click", closeContactsPopup);
+if(contactsPopupClose){
+    contactsPopupClose.addEventListener("click", closeContactsPopup);
+}
+
 
 // 
 // Popup with video on the home page
