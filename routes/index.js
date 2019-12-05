@@ -93,7 +93,7 @@ router.post('/send', (req,res) => {
         service: 'gmail',
         auth: {
             user: 'gleb.portfolio@gmail.com',
-            pass: 'pass-to-insert'
+            pass: 'password-here'
         }
     });
 
